@@ -9,15 +9,19 @@ public class FizzBuzzNumber {
   }
 
   public String convert() {
-    if (number % 3 == 0 && number % 5 == 0) {
+    if (isNumberDivisibleBy(3) && isNumberDivisibleBy(5)) {
       return "FizzBuzz";
     }
-    if (number % 3 == 0) {
+    if (isNumberDivisibleBy(3)) {
       return "Fizz";
     }
-    if (number % 5 == 0) {
+    if (isNumberDivisibleBy(5)) {
       return "Buzz";
     }
     return number.toString();
+  }
+
+  private boolean isNumberDivisibleBy(Integer divisor) {
+    return number % divisor == 0;
   }
 }
