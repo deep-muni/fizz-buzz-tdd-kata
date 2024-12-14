@@ -1,9 +1,14 @@
 package com.kata.fizzbuzz;
 
 public class FizzBuzzNumber {
-  public FizzBuzzNumber(int i) {}
+
+  private final Integer number;
+
+  public FizzBuzzNumber(Integer number) {
+    this.number = number;
+  }
 
   public String convert() {
-    return "1";
+    return number.toString();
   }
 }
