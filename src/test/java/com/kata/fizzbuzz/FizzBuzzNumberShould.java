@@ -18,7 +18,11 @@ class FizzBuzzNumberShould {
     "7, 7",
     "8, 8",
     "9, Fizz",
-    "10, Buzz"
+    "10, Buzz",
+    "11, 11",
+    "12, Fizz",
+    "13, 13",
+    "14, 14"
   })
   void convert_number_to_fizz_buzz_string(Integer value, String expected) {
     FizzBuzzNumber number = new FizzBuzzNumber(value);
