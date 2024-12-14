@@ -12,7 +12,7 @@ public class FizzBuzzNumber {
     if (number % 3 == 0) {
       return "Fizz";
     }
-    if (number.equals(5)) {
+    if (number.equals(5) || number.equals(10)) {
       return "Buzz";
     }
     return number.toString();
