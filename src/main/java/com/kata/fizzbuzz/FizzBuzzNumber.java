@@ -2,6 +2,10 @@ package com.kata.fizzbuzz;
 
 public class FizzBuzzNumber {
 
+  public static final String FIZZ = "Fizz";
+  public static final String BUZZ = "Buzz";
+  public static final String FIZZ_BUZZ = "FizzBuzz";
+
   private final Integer number;
 
   public FizzBuzzNumber(Integer number) {
@@ -10,13 +14,13 @@ public class FizzBuzzNumber {
 
   public String convert() {
     if (isNumberDivisibleBy(3) && isNumberDivisibleBy(5)) {
-      return "FizzBuzz";
+      return FIZZ_BUZZ;
     }
     if (isNumberDivisibleBy(3)) {
-      return "Fizz";
+      return FIZZ;
     }
     if (isNumberDivisibleBy(5)) {
-      return "Buzz";
+      return BUZZ;
     }
     return number.toString();
   }
