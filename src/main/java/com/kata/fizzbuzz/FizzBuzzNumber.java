@@ -9,7 +9,7 @@ public class FizzBuzzNumber {
   }
 
   public String convert() {
-    if (number.equals(15)) {
+    if (number % 3 == 0 && number % 5 == 0) {
       return "FizzBuzz";
     }
     if (number % 3 == 0) {
