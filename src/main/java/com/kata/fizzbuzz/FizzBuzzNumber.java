@@ -9,7 +9,7 @@ public class FizzBuzzNumber {
   }
 
   public String convert() {
-    if (number.equals(3)) {
+    if (number.equals(3) || number.equals(6)) {
       return "Fizz";
     }
     if (number.equals(5)) {

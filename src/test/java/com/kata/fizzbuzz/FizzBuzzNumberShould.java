@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class FizzBuzzNumberShould {
 
   @ParameterizedTest
-  @CsvSource({"1, 1", "2, 2", "3, Fizz", "4, 4", "5, Buzz"})
+  @CsvSource({"1, 1", "2, 2", "3, Fizz", "4, 4", "5, Buzz", "6, Fizz"})
   void convert_number_to_fizz_buzz_string(Integer value, String expected) {
     FizzBuzzNumber number = new FizzBuzzNumber(value);
     assertThat(number.convert()).isEqualTo(expected);
