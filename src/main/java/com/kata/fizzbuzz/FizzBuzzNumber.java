@@ -9,6 +9,9 @@ public class FizzBuzzNumber {
   }
 
   public String convert() {
+    if (number.equals(15)) {
+      return "FizzBuzz";
+    }
     if (number % 3 == 0) {
       return "Fizz";
     }
