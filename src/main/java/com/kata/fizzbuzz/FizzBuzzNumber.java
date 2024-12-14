@@ -12,6 +12,9 @@ public class FizzBuzzNumber {
     if (number.equals(3)) {
       return "Fizz";
     }
+    if (number.equals(5)) {
+      return "Buzz";
+    }
     return number.toString();
   }
 }
