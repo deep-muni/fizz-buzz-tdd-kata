@@ -5,11 +5,21 @@ import static com.kata.fizzbuzz.FizzBuzzNumber.FIZZ;
 import static com.kata.fizzbuzz.FizzBuzzNumber.FIZZ_BUZZ;
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 class FizzBuzzNumberShould {
+
+  @Test
+  void return_zero_when_input_is_zero_or_invalid() {
+    FizzBuzzNumber number = new FizzBuzzNumber(0);
+    assertThat(number.convert()).isEqualTo("0");
+
+    number = new FizzBuzzNumber(null);
+    assertThat(number.convert()).isEqualTo("0");
+  }
 
   @ParameterizedTest
   @CsvSource({

@@ -1,5 +1,7 @@
 package com.kata.fizzbuzz;
 
+import java.util.Objects;
+
 public class FizzBuzzNumber {
 
   public static final String FIZZ = "Fizz";
@@ -13,6 +15,10 @@ public class FizzBuzzNumber {
   }
 
   public String convert() {
+    if (isNumberInvalid()) {
+      return "0";
+    }
+
     if (isNumberDivisibleBy(3) && isNumberDivisibleBy(5)) {
       return FIZZ_BUZZ;
     }
@@ -23,6 +29,10 @@ public class FizzBuzzNumber {
       return BUZZ;
     }
     return number.toString();
+  }
+
+  private boolean isNumberInvalid() {
+    return Objects.isNull(number) || number.equals(0);
   }
 
   private boolean isNumberDivisibleBy(Integer divisor) {
